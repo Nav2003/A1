@@ -1,22 +1,182 @@
 <!DOCTYPE html>
-<html>
-<body>
-<title> Template 001 </title>
-</head>
-<title> Assignment 2 </title>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
 </head>
 <body>
 
-<h1> Personal Information </h1>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Assignment<br>1</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Assignment 1</a>
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Personal Information</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Intrest in IT</a>
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ideal Job</a>
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Personal Profile</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project Idea</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Profile</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Interior Designn</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Personal Information</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
 <p> My name is Navdeep Singh Ghuman, I prefer to be called Nav. My student number is s3944633 and my personal email address is navdeepsingh20032063@gmail.com. I was born and raised in India and came to Australia permanently in late 2015 to continue studying. I come from the northern side of India, called Punjab. At home the most spoken language would be Punjabi. Growing up I always wanted to be a part of aviation, being a pilot in either the air force or being a commercial pilot for any airline company. But one day in my elective class, I was taught coding (HTML, CSS and JavaScript), ever since I have fallen in love with coding and amazingly how it runs our computers and technology overall. In my free time I like to hit up the gym, play a lot of Basketball, perform Muay Thai and boxing. Another interesting fact about me would be that I use to be a Sue Chef in a professional restaurant, working under my mother who was a Head Chef in that workplace </p>
-
-<h2> <b> Intrets in IT </b> </h2>
-<p> <font face="Arial Black"> My interest in IT is software engineering, learning how to create and run software. My interest in IT started in an elective class in year 10 where I learned basic coding languages such as HTML, CSS and JavaScript. A teacher by name of Diego Hazikosta is an individual who I will never forget as he was the man who sparked my interest in IT. I have fair bit of experience in coding languages such as HTML, CSS and JavaScript, as those were the languages I learnt during my elective in year 10. This is due to RMIT being an extremely good university regarding technology. Whenever anything to do with Information Technology comes up, the conversation cannot end without mentioning RMIT. My friends who attended/attend RMIT recommended RMIT if I desired to do a degree regarding technology. Additionally, he campus in City was extremely close and easy to get to. Lastly, a lot of close friends who I graduated with were going to RMIT. I anticipate to gain experience and learn various aspects in the Information Technology industry. I expect to learn what it takes to step into the Technology world and how it is to manage and make your way around the Technology industry.  Having the ability to do different subjects in my course allows me to step into unusual aspect of the IT world and experience it well. </p>
+    </div>
 
 
-<h3> <b> Ideal Job </b> </h3>
-<p> Job Title and Description</p>
-<p> Looking at the knowledge and experience the job requires, the HTML, CSS and JavaScript knowledge, it appeals to me as a fair amount of experience and understanding of the three programming languages.  Secondly, as I love working in an environment where there is a great amount of collaborative work, I think this job is even more appealing to me. </p>
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Interest in IT</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p> My interest in IT is software engineering, learning how to create and run software. My interest in IT started in an elective class in year 10 where I learned basic coding languages such as HTML, CSS and JavaScript. A teacher by name of Diego Hazikosta is an individual who I will never forget as he was the man who sparked my interest in IT. I have fair bit of experience in coding languages such as HTML, CSS and JavaScript, as those were the languages I learnt during my elective in year 10. This is due to RMIT being an extremely good university regarding technology. Whenever anything to do with Information Technology comes up, the conversation cannot end without mentioning RMIT. My friends who attended/attend RMIT recommended RMIT if I desired to do a degree regarding technology. Additionally, he campus in City was extremely close and easy to get to. Lastly, a lot of close friends who I graduated with were going to RMIT. I anticipate to gain experience and learn various aspects in the Information Technology industry. I expect to learn what it takes to step into the Technology world and how it is to manage and make your way around the Technology industry. Having the ability to do different subjects in my course allows me to step into unusual aspect of the IT world and experience it well.
+    </p>
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Ideal Job</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p> Job Title and Description Looking at the knowledge and experience the job requires, the HTML, CSS and JavaScript knowledge, it appeals to me as a fair amount of experience and understanding of the three programming languages. Secondly, as I love working in an environment where there is a great amount of collaborative work, I think this job is even more appealing to me.
+    <p>A few skills which are required include: working collaboratively, proactively, professionally with others, take on responsibility, finishing allocated task before a deadline/timeframe and establish a high degree of technical product expertise, focusing on MAGIQ Cloud Product Suites in particular. The job requires knowledge and experience in HTML, CSS and JavaScript, databases such as MySQL and/or MS SQL, automated CI/CD Release Pipelines and modern UI Frameworks AngularJS or React.</p>
+    <p>At the moment I have a sufficient quantity of experience in programming languages such as HTML, CSS, JavaScript, Python. Additionally, I have the ability to operate the database management system MySQL and SQLite Studio.</p>
+    <p>My plan (at the moment) is to obtain my current degree, Bachelor of Information technology, and then proceed onto doing a Master’s of Information Technology at University Of Melbourne. Additionally, while I will be doing my Master’s, I will be looking for jobs which offer experience alongside allowing me to study. As the Master’s degree assures me that I will be able to step into the Software Engineering field without a uncertainty.
+    </p>
+
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Personal Profile</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">10 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">20% furniture discount</li>
+        <li class="w3-padding-16">Good deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 199</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Floorplanning</li>
+        <li class="w3-padding-16">50 hours support</li>
+        <li class="w3-padding-16">Photography</li>
+        <li class="w3-padding-16">50% furniture discount</li>
+        <li class="w3-padding-16">GREAT deals</li>
+        <li class="w3-padding-16">
+          <h2>$ 249</h2>
+          <span class="w3-opacity">per room</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
 
 </body>
 </html>
